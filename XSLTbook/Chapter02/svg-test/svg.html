@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SVG Test</title>
+</head>
+
+<body>
+
+<!-- The svg below does the following: 
+
+1.) Creates a 700 x 235 canvas on the html page
+2.) sets a background image for the canvas
+3.) writes text over the background image
+4.) defines a vector arrow
+5.) draws a line over the background image, and adds the vector arrow to that line
+
+-->
+<!-- Creates a 700 x 235 canvas on the html page -->
+<svg width="700" height="235">
+	<!-- sets a background image for the canvas -->
+	<image x="0" y="0" width="700" height="235" xlink:href="PublishReports.png" />
+	<!-- writes text over the background image -->
+	<text x="550" y="215" fill="000" font-family="Arial">I am call out text</text>
+	<!-- defines a vector arrow (set this as the marker-end in when we create the vector line below) -->
+	<defs>
+    	<marker id="arrow" markerWidth="10" markerHeight="10" refx="0" refy="3" orient="auto" markerUnits="strokeWidth">
+      		<path d="M0,0 L0,6 L5,3 z" fill="#100" />
+    	</marker>
+  	</defs>
+	<!-- draws a line over the background image, and adds the vector arrow to that line -->
+	<line x1="550" y1="200" x2="532" y2="170" style="stroke:rgb(0,0,0);stroke-width:2" marker-end="url(#arrow)" />
+</svg>
+
+</body>
+</html>

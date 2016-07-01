@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="sample_xhtml" default="test-saxon">
+	
+	<target name="test-saxon">
+		<xslt classpath="lib\saxon8.jar"
+			in="greeting.xml" 
+			out="greeting.html" 
+			style="greeting.xsl">
+			<factory name="net.sf.saxon.TransformerFactoryImpl"/>
+		</xslt>
+		
+		<xslt classpath="lib\saxon8.jar"
+			in="multiple-greetings.xml" 
+			out="multiple-greetings.html" 
+			style="multiple-greetings.xsl">
+			<factory name="net.sf.saxon.TransformerFactoryImpl"/>
+		</xslt>
+	</target>
+
+</project>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="generate-pdf" default="generate-pdf">
+
+	<property name="fop.home" value="fop"/>
+
+	<taskdef name="fop"
+	         classname="org.apache.fop.tools.anttasks.Fop">
+	  <classpath>
+	    <fileset dir="fop/lib">
+	      <include name="*.jar"/>
+	    </fileset>
+	    <fileset dir="fop/build">
+	      <include name="fop.jar"/>
+	      <include name="fop-hyph.jar" />
+	    </fileset>
+	  </classpath>
+	</taskdef>
+
+	<target name="generate-pdf" description="Generates a single PDF file">
+		
+		<xslt classpath="lib\saxon8.jar"
+					in="greeting.xml" 
+					out="greeting.out.xml" 
+					style="fo-greeting.xsl">
+					<factory name="net.sf.saxon.TransformerFactoryImpl"/>
+				</xslt>
+		
+	   <fop format="application/pdf"
+	        fofile="greeting.out.xml"
+	        outfile="pdfDocument.pdf" />
+	</target>
+
+</project>

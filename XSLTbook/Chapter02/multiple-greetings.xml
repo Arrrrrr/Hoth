@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<!-- multiple-greetings.xml -->
+<greetings>
+  <greeting>Look out!</greeting>
+  <greeting>Zombie!</greeting>
+</greetings>
