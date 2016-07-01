@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- find a way to update this with simply hits using innerHTML -->
+<html>
+	<head>
+		<title>Creating Objects with a Constructor Function - Object Oriented Programming</title>
+		<script>
+			function myObjectType(){
+				this.info = "I am feeling fine";
+				this.showInfo = function(){
+					document.getElementById("proteus").innerHTML = this.info;
+					document.getElementById("img1").src = "images/draco.jpg"
+
+				}
+				this.setInfo1 = function (newInfo) {
+					this.info = newInfo;
+					document.getElementById("proteus").innerHTML = this.info;
+					document.getElementById("img1").src = "images/sectumsempra_curse.gif"
+				}
+				
+				this.setInfo2 = function (newInfo) {
+					this.info = newInfo;
+					document.getElementById("proteus").innerHTML = this.info;
+					document.getElementById("img1").src = "images/healing_spell.gif"
+				}
+			}
+			var SnapeSpell = new myObjectType();
+		</script>
+		<link rel="stylesheet" type="text/css" href="hogwartsStyle.css">
+	</head>
+	<body onload = "SnapeSpell.showInfo()">
+		<input type="button" value="Sectumsempra" onclick="SnapeSpell.setInfo1('I am oozing out buckets of blood')" />
+		<input type="button" value="Vulnera Sanentur" onclick="SnapeSpell.setInfo2('That feels better')" />
+		<p id="proteus"></p>
+		
+		<img id="img1"></img>
+		
+
+		
+	</body>
+</html>
+
+
+
+

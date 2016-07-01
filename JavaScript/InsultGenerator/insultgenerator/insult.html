@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Return an insult</title>
+		<script>
+			function mean() {
+				var person = prompt("Hey poop sucker! Enter a name here.", "Annoying person");
+				var insult = prompt("Hey bilgewater licker! Enter an insult here.", "Horrid insult");
+				if (insult != null) {
+        			document.getElementById("meanwords").innerHTML = person + " is a " + insult;
+    			}
+			}
+		</script>
+		<link rel="stylesheet" type="text/css" href="hogwartsStyle.css"> 
+	</head>
+	<body>
+		<button onclick="mean()">Insult someone</button>
+		<p id="meanwords"></p>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Choose your destiny. Flawless. Victory</title>
+		<script>
+			function dragonEncounter()
+				{
+					var WhatToDo = prompt("How do you respond to the dragon?", "Options: fight, hug, inspect, steal");
+					WhatToDo = WhatToDo.toLowerCase();
+					switch (WhatToDo) {
+					case "fight" :
+						document.getElementById("message").innerHTML = "Goody two shoes Griffyndor.";
+						break;
+					case "hug" :
+						document.getElementById("message").innerHTML = "Sissy pants Hufflepuff.";
+						break;
+					case "inspect" :
+						document.getElementById("message").innerHTML = "Nerd Ravenclaw.";
+						break;
+					case "steal" :
+						document.getElementById("message").innerHTML = "Pure badss: Slytherin!!!";
+						break;
+					default :
+						document.getElementById("message").innerHTML = "I guess you are not a wizard after all. My snake will now eat you Muggle.";
+					}
+					
+			}
+		</script>
+		<link rel="stylesheet" type="text/css" href="hogwartsStyle.css"> 
+	</head>
+	<body>
+		<button onclick="dragonEncounter()">Oh look! A dragon. What do you do?</button>
+		<p id="message"></p>
+	</body>
+</html> 
