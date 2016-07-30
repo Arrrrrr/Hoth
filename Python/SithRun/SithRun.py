@@ -10,9 +10,9 @@ class GamePlay:
     def __init__(self):
         self.tk = Tk()
         self.tk.title("ESCAPE THE REBEL BASE!!!!")
-        # makes the canvas non-resizable (because that would mess the game up)
+        # makes the canvas non-resizable (resizing would mess the game coordinates)
         self.tk.resizable(0, 0)
-        # moves this window to the front, makes it topmost of all ope windows
+        # moves this window to the front, makes it topmost of all open windows
         self.tk.wm_attributes("-topmost", 1)
         # set up the canvas, which is our game board
         self.canvas = Canvas(self.tk, width=500, height=500, highlightthickness=0)
@@ -23,17 +23,20 @@ class GamePlay:
         self.canvas_height = 500
         self.canvas_width = 500
 		# sets up a repeating background image
+		# the width is 500 x 500. the background image is 100 x 100. 
         self.bg = PhotoImage(file="background.gif")
         w = self.bg.width()
         h = self.bg.height()
+        # This range counts out 0,1,2,3,4 and this gives you 5 times. 100 x 5 = 500
         for x in range(0, 5):
             for y in range(0, 5):
                 self.canvas.create_image(x * w, y * h, image=self.bg, anchor='nw')
-        # when we add sprites, we will use append to do them to this list
-        # so they are stored as sprites that are part of the game
+        # when we add sprites, we will use append to add them to this list
+        # which means they are stored as sprites that are part of the game
         self.sprites = []
         self.running = True
         
+        # we store the message for a winner, to use when someone wins
         self.win_words = self.canvas.create_text(250, 250, text='SITH ESCAPED', fill = "white", font=("Consolas", 60), state='hidden')
         
     def controlloop(self):
