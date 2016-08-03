@@ -1,5 +1,5 @@
 # This is set up for Python version 2, may need to make tweaks
-# if we wanted it to run for Python 3 like change Tkinter to tkinter
+# if we wanted it to run for Python 3 change Tkinter to tkinter
 
 from Tkinter import *
 import random
@@ -34,13 +34,14 @@ class GamePlay:
         # when we add sprites, we will use append to add them to this list
         # which means they are stored as sprites that are part of the game
         self.sprites = []
+        # starts the game
         self.running = True
         
         # we store the message for a winner, to use when someone wins
         self.win_words = self.canvas.create_text(250, 250, text='SITH ESCAPED', fill = "white", font=("Consolas", 60), state='hidden')
         
     def controlloop(self):
-        # this while loop will run until the window closes
+        # this while loop will run until the window closes because while 1 is a python keyword
         while 1:
             # if the variable running is True, will loop through the list of sprites (self.sprites)
             if self.running:
@@ -518,6 +519,7 @@ class JoeZuckerSprite(Sprite):
     
     # function for what happens when the emperor reaches the escape door    
     def end(self, sprite):
+        # ends the game
         self.game.running = False
         # door opens
         sprite.opendoor()
