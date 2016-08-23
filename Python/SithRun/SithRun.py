@@ -43,11 +43,13 @@ class GamePlay:
     def controlloop(self):
         # this while loop will run until the window closes because while 1 is a python keyword
         while 1:
-            # if the variable running is True, will loop through the list of sprites (self.sprites)
+            # this if statement means if this fuction is running, the script will loop through the list of sprites (self.sprites)
             if self.running:
                 for sprite in self.sprites:
-                    # apply move() function to sprites as loop through them
+                    # apply move() function to sprites as this for statement loops through them
                     sprite.move()
+            # this else statement tells the script what to do when the function stops running. 
+            # the function will stop running when the emperor escapes, so the script pauses briefly then says the winning words
             else:
                 time.sleep(1)
                 self.canvas.itemconfig(self.win_words, state='normal')
@@ -55,7 +57,7 @@ class GamePlay:
             self.tk.update_idletasks()
             self.tk.update()
             time.sleep(0.01)
-
+# review this line
 # holds the positions for our game pieces
 class InGameCrds:
     def __init__(self, x1=0, y1=0, x2=0, y2=0):
