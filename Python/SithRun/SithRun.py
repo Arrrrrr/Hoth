@@ -57,10 +57,11 @@ class GamePlay:
             self.tk.update_idletasks()
             self.tk.update()
             time.sleep(0.01)
-# review this line
+
 # holds the positions for our game pieces
 class InGameCrds:
     def __init__(self, x1=0, y1=0, x2=0, y2=0):
+        # the next four lines assign the values from the parameters above
         self.x1 = x1
         self.y1 = y1
         self.x2 = x2
@@ -68,15 +69,15 @@ class InGameCrds:
 
 # two functions to check if sprites are colliding
 # checking if one set of coordinates has crossed over into another set of coordinates
-# co1 and co2 represent two separate objects
+# coordinates01 and coordinates02 are two separate objects. we created them as parameters of the function.
 
 # check for horizontal collision
 
-def within_x(co1, co2):
-    if (co1.x1 > co2.x1 and co1.x1 < co2.x2) \
-            or (co1.x2 > co2.x1 and co1.x2 < co2.x2) \
-            or (co2.x1 > co1.x1 and co2.x1 < co1.x2) \
-            or (co2.x2 > co1.x1 and co2.x2 < co1.x1):
+def within_x(coordinates01, coordinates02):
+    if (coordinates01.x1 > coordinates02.x1 and coordinates01.x1 < coordinates02.x2) \
+            or (coordinates01.x2 > coordinates02.x1 and coordinates01.x2 < coordinates02.x2) \
+            or (coordinates02.x1 > coordinates01.x1 and coordinates02.x1 < coordinates01.x2) \
+            or (coordinates02.x2 > coordinates01.x1 and coordinates02.x2 < coordinates01.x1):
         return True
         # false returned if no coordinates cross
     else:
@@ -84,68 +85,66 @@ def within_x(co1, co2):
 
 # check for vertical collision
 
-def within_y(co1, co2):
-    if (co1.y1 > co2.y1 and co1.y1 < co2.y2) \
-            or (co1.y2 > co2.y1 and co1.y2 < co2.y2) \
-            or (co2.y1 > co1.y1 and co2.y1 < co1.y2) \
-            or (co2.y2 > co1.y1 and co2.y2 < co1.y1):
+def within_y(coordinates01, coordinates02):
+    if (coordinates01.y1 > coordinates02.y1 and coordinates01.y1 < coordinates02.y2) \
+            or (coordinates01.y2 > coordinates02.y1 and coordinates01.y2 < coordinates02.y2) \
+            or (coordinates02.y1 > coordinates01.y1 and coordinates02.y1 < coordinates01.y2) \
+            or (coordinates02.y2 > coordinates01.y1 and coordinates02.y2 < coordinates01.y1):
         return True
         # false returned of no coordinates cross
     else:
         return False
 
 # four functions to check on which side sprites have collided
-# co1 and co2 represent two separate objects
 
 # checks: did the left hand side (x1 value) of a first coordinate object hit another coordinate object
-def left_side_collide(co1, co2):
+def left_side_collide(coordinates01, coordinates02):
 	# only move on to second if statement if the function within_y returned True
-	# if there is no vertical collision, there be no horizontal collision
-    if within_y(co1, co2):
-        if co1.x1 <= co2.x2 and co1.x1 >= co2.x1:
+	# if thar be no vertical collision, thar be no horizontal collision
+    if within_y(coordinates01, coordinates02):
+        if coordinates01.x1 <= coordinates02.x2 and coordinates01.x1 >= coordinates02.x1:
             return True
     return False
 
 # checks: did the right hand side (x2 value) of a first coordinate object hit another coordinate object
-def right_side_collide(co1, co2):
+def right_side_collide(coordinates01, coordinates02):
 	# only move on to second if statement if the function within_y returned True
-	# if there is no vertical collision, there be no horizontal collision
-    if within_y(co1, co2):
-        if co1.x2 >= co2.x1 and co1.x2 <= co2.x2:
+	# if thar be no vertical collision, thar be no horizontal collision
+    if within_y(coordinates01, coordinates02):
+        if coordinates01.x2 >= coordinates02.x1 and coordinates01.x2 <= coordinates02.x2:
             return True
     return False
 
 # checks: did the top (y1 value) of a first coordinate object hit another coordinate object
-def top_collide(co1, co2):
+def top_collide(coordinates01, coordinates02):
 	# only move on to second if statement if the function within_x returned True
-	# if there is no horizontal collision, there be no vertical collision
-    if within_x(co1, co2):
-        if co1.y1 <= co2.y2 and co1.y1 >= co2.y1:
+	# if thar be no horizontal collision, thar be no vertical collision
+    if within_x(coordinates01, coordinates02):
+        if coordinates01.y1 <= coordinates02.y2 and coordinates01.y1 >= coordinates02.y1:
             return True
     return False
 
-
-def bottom_collide(y, co1, co2):
+# checks: did the bottom (y2 value) of a first coordinate object hit another coordinate object
+def bottom_collide(y, coordinates01, coordinates02):
 	# only move on to second if statement if the function within_x returned True
 	# if there is no horizontal collision, there be no vertical collision
-    if within_x(co1, co2):
-		# add new parameter y to y1 / top of object
-		# we need the additional y parameter to add gravity. we need to test whether the object will
-		# fall and then collide, or if it already has collided and will not fall lower
-		# not sure what this why parameter is though. potentially addition of space if object jumps or the subtraction of space if it falls?
-        y2 = co1.y2 + y
-        if y2 >= co2.y1 and y2 <= co2.y2:
+    if within_x(coordinates01, coordinates02):
+		# add new parameter y to y2 / bottom of object
+		# when the object is collided on y2, we do not want it to go down any further
+		# however, in value, we want it to hover above the object it is collided with so it can still move left and right
+        y2 = coordinates01.y2 + y
+        if y2 >= coordinates02.y1 and y2 <= coordinates02.y2:
             return True
     return False
 
 # parent class for sprite item
 class Sprite:
-	# the parameter game will be the game object, this parameter makes it so that 
-	# any sprite we create sprite we create can access the other sprites in the game
+	# the parameter game will be the game object, the game parameter makes it so that 
+	# any sprite we create can access the other sprites in the game
     def __init__(self, game):
 		# store game parameter as an object variable
         self.game = game
-		# this will indicate when the game is over
+		# when this becomes True, the game is over
         self.endgame = False
 		# this variable will indicate the final object
         self.coordinates = None
