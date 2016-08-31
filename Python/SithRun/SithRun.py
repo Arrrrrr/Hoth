@@ -137,29 +137,28 @@ def bottom_collide(y, coordinates01, coordinates02):
             return True
     return False
 
-# parent class for sprite item
+# parent class for all in game sprites
+# thing functions in this class will be passed on to other sprites that are its descendents
 class Sprite:
 	# the parameter game will be the game object, the game parameter makes it so that 
 	# any sprite we create can access the other sprites in the game
     def __init__(self, game):
 		# store game parameter as an object variable
         self.game = game
-		# when this becomes True, the game is over
+		# establishes that the game is not over
         self.endgame = False
-		# this variable will indicate the final object
+		# the next two variables will indicate the final object with its position
         self.coordinates = None
         self.y = 0
-		# in this parent class, the move and coords functions do not serve any purpose.
-		# but we keep them in 
-		# in the parent class, the move function does not do anything
-		# so we pass it
+		# although the move and coords functions do nothing in this parent class, we keep them
+		# here to pass on to its descendents. these functions will do something in the descendent classes
     def move(self):
         pass
-    # return the coordinates for the final object variable (empty in the parent)
     def coords(self):
         return self.coordinates        
 
 # child of Sprite        
+# static platform
 class HoverPadSpite(Sprite):
     def __init__(self, game, photo_image, x, y, width, height):
         # call the init of the parent class Sprite
@@ -168,7 +167,7 @@ class HoverPadSpite(Sprite):
         self.photo_image = photo_image
         # draw photo_image onto the canvas
         self.image = game.canvas.create_image(x, y, image=self.photo_image, anchor='nw')
-        # started out empty, populate with coordinates for actual object
+        # started out empty, populate with coordinates for actual object. add height and width to generate a space for it to inhabit
         self.coordinates = InGameCrds(x, y, x + width, y + height)
 
 # child of HoverPadSpite, grandchild of Sprite, inherits from both
@@ -182,6 +181,7 @@ class LRMoveHoverPadSpite(HoverPadSpite):
         self.width = width
         self.height = height
     
+    # add height and width to position points to draw the space the sprite will take up
     def coords(self):
         xy = list(self.game.canvas.coords(self.image))
         self.coordinates.x1 = xy[0]
@@ -211,6 +211,7 @@ class UDMoveHoverPadSpite(HoverPadSpite):
         self.width = width
         self.height = height
 
+    # add height and width to position points to draw the space the sprite will take up
     def coords(self):
         xy = list(self.game.canvas.coords(self.image))
         self.coordinates.x1 = xy[0]
