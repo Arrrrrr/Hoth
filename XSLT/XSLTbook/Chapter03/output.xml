@@ -1,0 +1,31 @@
+
+Comparing sequences with values:
+  Sales figures (/report/brand/units):
+    27408, 8203, 22101, 14336, 192688
+
+      /report/brand/units >  27408 : true
+      /report/brand/units >=  27408 : true
+      /report/brand/units <  8203 : false
+      /report/brand/units <= 8203  : false
+      /report/brand/units =  22101 : true
+      /report/brand/units = 17905 : false
+ not(/report/brand/units = 17905): true
+
+Comparing two sequences:
+ $testSequence1 (xs:integer*):
+    8203, 22101, 27408, 19268, 14336
+    $testSequence1 = /report/brand/units: true
+
+  $testSequence2 (xs:integer*):
+    19268, 17, 95, 6, 42
+   $testSequence2 = /report/brand/units: false
+    $testSequence2 < /report/brand/units: true
+    $testSequence2 > /report/brand/units: true
+
+  $testSequence3 (xs:string*):
+blue, white, 19268
+    $testSequence3 = /report/brand/units: false
+
+  $testSequence4 (xs:yearMonthDuration*):
+   (P3Y8M, P4Y8M, P2Y9M)
+  $testSequence4 > xs:yearMonthDuration('P4Y7M'): false
