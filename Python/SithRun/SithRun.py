@@ -23,7 +23,7 @@ class GamePlay:
         self.canvas_height = 500
         self.canvas_width = 500
 		# sets up a repeating background image
-		# the width is 500 x 500. the background image is 100 x 100. 
+		# the canvas is 500 x 500. the background image is 100 x 100. 
         self.bg = PhotoImage(file="background.gif")
         w = self.bg.width()
         h = self.bg.height()
@@ -47,6 +47,7 @@ class GamePlay:
             if self.running:
                 for sprite in self.sprites:
                     # apply move() function to sprites as this for statement loops through them
+                    # each of the sprites has this function built into them in a different manner
                     sprite.move()
             # this else statement tells the script what to do when the function stops running. 
             # the function will stop running when the emperor escapes, so the script pauses briefly then says the winning words
