@@ -15,7 +15,7 @@ class GamePlay:
         # moves this window to the front, makes it topmost of all open windows
         self.tk.wm_attributes("-topmost", 1)
         # set up the canvas, which is our game board
-        self.canvas = Canvas(self.tk, width=500, height=500, highlightthickness=0)
+        self.canvas = Canvas(self.tk, width = 500, height = 500, highlightthickness = 0)
         # pack and update are pre established functions of the Tk object
         self.canvas.pack()
         self.tk.update()
@@ -24,7 +24,7 @@ class GamePlay:
         self.canvas_width = 500
 		# sets up a repeating background image
 		# the canvas is 500 x 500. the background image is 100 x 100. 
-        self.bg = PhotoImage(file="background.gif")
+        self.bg = PhotoImage(file = "background.gif")
         w = self.bg.width()
         h = self.bg.height()
         # This range counts out 0,1,2,3,4 and this gives you 5 times. 100 x 5 = 500
@@ -37,23 +37,23 @@ class GamePlay:
         # starts the game
         self.running = True
         
-        # we store the message for a winner, to use when someone wins
-        self.win_words = self.canvas.create_text(250, 250, text='SITH ESCAPED', fill = "white", font=("Consolas", 60), state='hidden')
-        
+        # we store the message for a winner and display it when someone wins
+        self.win_words = self.canvas.create_text(250, 250, text = 'SITH ESCAPED', fill = "white", font = ("Consolas", 60), state = 'hidden')
+    
     def controlloop(self):
-        # this while loop will run until the window closes because while 1 is a python keyword
+        # this while loop will run until the window closes. while 1 is a python keyword
         while 1:
-            # this if statement means if this fuction is running, the script will loop through the list of sprites (self.sprites)
+            # this if statement means if this function is running, the script will loop through the list of sprites (self.sprites)
             if self.running:
                 for sprite in self.sprites:
                     # apply move() function to sprites as this for statement loops through them
                     # each of the sprites has this function built into them in a different manner
                     sprite.move()
-            # this else statement tells the script what to do when the function stops running. 
-            # the function will stop running when the emperor escapes, so the script pauses briefly then says the winning words
+            # self.running will be false when the emperor goes through the door, and the function end executes the command self.game.running = False
+            # this else statement tells the script what to do when the function stops running: pause briefly then say the winning words
             else:
-                time.sleep(1)
-                self.canvas.itemconfig(self.win_words, state='normal')
+                # we changed the state for win_words from hidden to normal, so they now display
+                self.canvas.itemconfig(self.win_words, state = 'normal')
             # forces the Tk object to redraw the screen and pause before starting
             self.tk.update_idletasks()
             self.tk.update()
@@ -92,7 +92,7 @@ def within_y(coordinates01, coordinates02):
             or (coordinates02.y1 > coordinates01.y1 and coordinates02.y1 < coordinates01.y2) \
             or (coordinates02.y2 > coordinates01.y1 and coordinates02.y2 < coordinates01.y1):
         return True
-        # false returned of no coordinates cross
+        # false returned if no coordinates cross
     else:
         return False
 
@@ -233,6 +233,9 @@ class UDMoveHoverPadSpite(HoverPadSpite):
                 self.counter = 0
         else:
             self.y = 0
+            
+# sprite functions EscapeHatchSprite and JoeZuckerSprite have images that belong exclusively to them >> we pass the images into the functions
+# sprite functions that share images, like the platforms >> we set up external variables and then pull them in via parameters
 
 # child of Sprite
 class EscapeHatchSprite(Sprite):
@@ -257,9 +260,8 @@ class EscapeHatchSprite(Sprite):
         self.game.canvas.itemconfig(self.image, image=self.closed_door)
         self.game.tk.update_idletasks()
 
-# child of Sprite class
-# since there is only one, we can pass the images inside the sprite instead 
-# of loading them as parameters like with the other sprites
+# evil child of Sprite
+# begin JoeZuckerSprite class
 class JoeZuckerSprite(Sprite):
 	# 
     def __init__(self, game):
@@ -532,10 +534,10 @@ class JoeZuckerSprite(Sprite):
         # door closes
         sprite.closedoor()
         # if you want to close out window at end of game, uncomment below
-        # time.sleep(3)
+        # time.sleep(5)
         # self.root.destroy
-        
-       
+    
+# end JoeZuckerSprite class
 
 # create a variable from the class GamePlay which we will pass as a parameter when we
 # create variables from the HoverPadSpite class
@@ -562,8 +564,8 @@ g.sprites.append(platform8)
 g.sprites.append(platform9)
 g.sprites.append(hover010)
 door = EscapeHatchSprite(g, 45, 30, 40, 35)
-# alternate door if you want to test without playing the whole gamex
-# door = EscapeHatchSprite(g, 400, 470, 400, 400)
+# alternate door if you want to test without playing the whole game
+door = EscapeHatchSprite(g, 400, 470, 400, 400)
 g.sprites.append(door)
 ds = JoeZuckerSprite(g)
 g.sprites.append(ds)
