@@ -42,6 +42,8 @@ class GamePlay:
     
     def controlloop(self):
         # this while loop will run until the window closes. while 1 is a python keyword
+        def say_winning_words(self):
+            self.canvas.itemconfig(self.win_words, state = 'normal')
         while 1:
             # this if statement means if this function is running, the script will loop through the list of sprites (self.sprites)
             if self.running:
@@ -52,12 +54,13 @@ class GamePlay:
             # self.running will be false when the emperor goes through the door, and the function end executes the command self.game.running = False
             # this else statement tells the script what to do when the function stops running: pause briefly then say the winning words
             else:
-                # we changed the state for win_words from hidden to normal, so they now display
-                self.canvas.itemconfig(self.win_words, state = 'normal')
+                # run function to change the state for win_words from hidden to normal, so they now display
+                say_winning_words(self)
             # forces the Tk object to redraw the screen and pause before starting
             self.tk.update_idletasks()
             self.tk.update()
             time.sleep(0.01)
+      
 
 # holds the positions for our game pieces
 class InGameCrds:
@@ -535,9 +538,11 @@ class JoeZuckerSprite(Sprite):
         sprite.closedoor()
         # if you want to close out window at end of game, uncomment below
         # time.sleep(5)
-        # self.root.destroy
-    
+        # quit()
+   
 # end JoeZuckerSprite class
+
+
 
 # create a variable from the class GamePlay which we will pass as a parameter when we
 # create variables from the HoverPadSpite class
