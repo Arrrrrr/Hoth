@@ -6,7 +6,7 @@ import random
 import time
 
 # class to initialize the game, main controller for our game
-class GamePlay:
+class MoDro:
     def __init__(self):
         self.tk = Tk()
         self.tk.title("ESCAPE THE REBEL BASE!!!!")
@@ -35,32 +35,23 @@ class GamePlay:
         # which means they are stored as sprites that are part of the game
         self.sprites = []
         # starts the game
-        self.running = True
-        
-        # we store the message for a winner and display it when someone wins
-        self.win_words = self.canvas.create_text(250, 250, text = 'SITH ESCAPED', fill = "white", font = ("Consolas", 60), state = 'hidden')
-    
+        self.running = True        
+            
     def controlloop(self):
-        # this while loop will run until the window closes. while 1 is a python keyword
-        def say_winning_words(self):
-            self.canvas.itemconfig(self.win_words, state = 'normal')
-        while 1:
-            # this if statement means if this function is running, the script will loop through the list of sprites (self.sprites)
-            if self.running:
-                for sprite in self.sprites:
-                    # apply move() function to sprites as this for statement loops through them
-                    # each of the sprites has this function built into them in a different manner
-                    sprite.move()
+        # we set self.running to True in the init function. it will be set to false in class DarthZuckerSprite.
+        while self.running:
+            # if this function is running, the script will loop through the list of sprites (self.sprites)
+            for sprite in self.sprites:
+                 # apply move() function to sprites as this for statement loops through them
+                 # each of the sprites has this function built into them in a different manner
+                 sprite.move()
             # self.running will be false when the emperor goes through the door, and the function end executes the command self.game.running = False
             # this else statement tells the script what to do when the function stops running: pause briefly then say the winning words
-            else:
-                # run function to change the state for win_words from hidden to normal, so they now display
-                say_winning_words(self)
             # forces the Tk object to redraw the screen and pause before starting
             self.tk.update_idletasks()
             self.tk.update()
             time.sleep(0.01)
-      
+             
 
 # holds the positions for our game pieces
 class InGameCrds:
@@ -237,7 +228,7 @@ class UDMoveHoverPadSpite(HoverPadSpite):
         else:
             self.y = 0
             
-# sprite functions EscapeHatchSprite and JoeZuckerSprite have images that belong exclusively to them >> we pass the images into the functions
+# sprite functions EscapeHatchSprite and DarthZuckerSprite have images that belong exclusively to them >> we pass the images into the functions
 # sprite functions that share images, like the platforms >> we set up external variables and then pull them in via parameters
 
 # child of Sprite
@@ -264,8 +255,8 @@ class EscapeHatchSprite(Sprite):
         self.game.tk.update_idletasks()
 
 # evil child of Sprite
-# begin JoeZuckerSprite class
-class JoeZuckerSprite(Sprite):
+# begin DarthZuckerSprite class
+class DarthZuckerSprite(Sprite):
 	# 
     def __init__(self, game):
         Sprite.__init__(self, game)
@@ -319,7 +310,7 @@ class JoeZuckerSprite(Sprite):
 	
 	# returns the emperor's current position, feeds into functions to make him move
     def coords(self):
-    	# takes canvas variable from GamePlay class, and returns its x and y values
+    	# takes canvas variable from MoDro class, and returns its x and y values
         xy = list(self.game.canvas.coords(self.image))
         # takes those values and assigns top left
         self.coordinates.x1 = xy[0]
@@ -527,26 +518,24 @@ class JoeZuckerSprite(Sprite):
     
     # function for what happens when the emperor reaches the escape door    
     def end(self, sprite):
-        # ends the game
         self.game.running = False
+        # use the canvas to print winning words
+        self.win_words = self.game.canvas.create_text(250, 250, text = 'SITH ESCAPED', fill = "white", font = ("Consolas", 60))
         # door opens
         sprite.opendoor()
+        # pause
         time.sleep(1)
-        # emperor disappears
+        # the emperor disappears
         self.game.canvas.itemconfig(self.image, state='hidden')
-        # door closes
+        # the door closes
         sprite.closedoor()
-        # if you want to close out window at end of game, uncomment below
-        # time.sleep(5)
-        # quit()
-   
-# end JoeZuckerSprite class
+        # pause to savor the thrill of victory before the window closes
+        time.sleep(1)
+# end DarthZuckerSprite class
 
-
-
-# create a variable from the class GamePlay which we will pass as a parameter when we
+# create a variable from the class MoDro which we will pass as a parameter when we
 # create variables from the HoverPadSpite class
-g = GamePlay()
+g = MoDro()
 hover01 = HoverPadSpite(g, PhotoImage(file="hover01.gif"), 0, 480, 100, 10)
 hover02 = HoverPadSpite(g, PhotoImage(file="hover01.gif"), 150, 440, 100, 10)
 hover03 = HoverPadSpite(g, PhotoImage(file="hover01.gif"), 300, 400, 100, 10)
@@ -570,8 +559,8 @@ g.sprites.append(platform9)
 g.sprites.append(hover010)
 door = EscapeHatchSprite(g, 45, 30, 40, 35)
 # alternate door if you want to test without playing the whole game
-door = EscapeHatchSprite(g, 400, 470, 400, 400)
+# door = EscapeHatchSprite(g, 400, 470, 400, 400)
 g.sprites.append(door)
-ds = JoeZuckerSprite(g)
-g.sprites.append(ds)
+force_choke = DarthZuckerSprite(g)
+g.sprites.append(force_choke)
 g.controlloop()
