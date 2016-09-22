@@ -1,0 +1,18 @@
+GAME CONTROLS
+
+	Up button = jump
+	Left button = left
+	Right button = right
+	Down button = stop moving
+
+(instructions below only work for mac, for windows see http://editrocket.com/articles/python_windows.html)
+
+Download SithRun.zip
+Place SithRun.zip in your Documents folder
+Unzip SithRun.zip
+Open your Mac terminal
+Type the following command: cd Documents/SithRun/
+Type the following comman:d python SithRun.py
+Click inside the window that pops up to start the game
+Try to navigate the Emperor to the red escape hatch at the top left of the window.
+
