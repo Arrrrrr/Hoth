@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!-- fighters.xml -->
+<fighters>
+    <name allegiance="Rebellion">X Wing</name>
+    <name allegiance="Empire">TIE fighter</name>
+    <name allegiance="Bounty">Millenium Falcon</name>
+    <name allegiance="Rebellion">The Ghost</name>
+    <name allegiance="Starfleet">The USS Enterprise</name>
+    <name allegiance="Empire">Star destroyer</name>
+    <name allegiance="Bounty">Slave I</name>
+</fighters>

@@ -1,0 +1,8 @@
+
+  Ship name and allegiance: X Wing - Rebel Alliance
+  Ship name and allegiance: TIE fighter - The Empire
+  Ship name and allegiance: Millenium Falcon - Bounty Hunter
+  Ship name and allegiance: The Ghost - Rebel Alliance
+  Ship name and allegiance: The USS Enterprise - We don't know this ship.
+  Ship name and allegiance: Star destroyer - The Empire
+  Ship name and allegiance: Slave I - Bounty Hunter
