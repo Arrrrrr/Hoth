@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- characters.xml -->
+<characters>
+    <story name="Narnia">
+        <character>Peter</character>
+        <character>Susan</character>
+        <character>Edmund</character>
+        <character>Lucy</character>
+    </story>
+    <story name="The Giver">
+        <character>Jonas</character>     
+        <character>The Giver</character>
+        <character>Gabe</character> 
+        <character>Fiona</character>
+    </story>
+    <story name="Bunnicula">
+        <character>Bunnicula</character>
+        <character>Chester</character>
+        <character>Harold</character>
+    </story>
+</characters>

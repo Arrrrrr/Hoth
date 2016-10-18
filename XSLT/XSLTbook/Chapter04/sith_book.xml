@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- sith_book.xml -->
+<book>
+    <title>Greatest of the Sith</title>
+    <SithList>
+        <BadSithListEntry>Darth Zucker</BadSithListEntry>
+        <BadSithListEntry>Darth Briggs</BadSithListEntry>
+        <SithListEntry>Darth Sidious</SithListEntry>
+        <SithListEntry>Darth Vader</SithListEntry>
+        <SithListEntry>Darth Plagueis</SithListEntry>
+        <SithListEntry>Darth Bane</SithListEntry>
+        <SithListEntry>Darth Maul</SithListEntry>
+    </SithList>
+</book>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="sample_xhtml" default="test-saxon">
+	
+	<target name="test-saxon">
+		<xslt classpath="lib\saxon8.jar"
+			in="sith_book.xml" 
+			out="sith_book.html" 
+			style="sith_book.xsl">
+			<factory name="net.sf.saxon.TransformerFactoryImpl"/>
+		</xslt>
+	</target>
+
+</project>
