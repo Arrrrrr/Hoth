@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="sample_xhtml" default="test-saxon">
+	
+	<!--
+	
+	for this script, the values for in and style are the same;
+	value-of_sequences.xsl is a sequence, so it doesn't need an input xml file to output stuff;
+	WARNING!!! This ant script produces a list of delicious 7/11 food that will make you hungry
+	
+	  -->
+	
+	<target name="test-saxon">
+		<xslt classpath="lib\saxon8.jar"
+			in="value-of_sequences.xsl" 
+			out="sequence.txt" 
+			style="value-of_sequences.xsl">
+			<factory name="net.sf.saxon.TransformerFactoryImpl"/>
+		</xslt>
+	</target>
+
+</project>
