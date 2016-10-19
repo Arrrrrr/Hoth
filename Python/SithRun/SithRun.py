@@ -257,11 +257,11 @@ class EscapeHatchSprite(Sprite):
 # evil child of Sprite
 # begin DarthZuckerSprite class
 class DarthZuckerSprite(Sprite):
-	# 
+	
     def __init__(self, game):
         Sprite.__init__(self, game)
 
-		# images used to animate left and right running
+		# images used to animate running left and right
         self.images_left = [
             PhotoImage(file="empyLeft01.gif"),
             PhotoImage(file="empyLeft02.gif"),
@@ -274,8 +274,7 @@ class DarthZuckerSprite(Sprite):
         ]
 		
         # the create_image function draws the first image on the canvas
-        self.image = game.canvas.create_image(200, 470, image=self.images_left[0], anchor='nw')
-		
+        self.image = game.canvas.create_image(200, 470, image=self.images_left[0], anchor='nw')	
 		# in the variables x and y, we store what we will be adding to the horizontal and vertical coordinates. 
 		# this amount starts at 0 so the emperor is stationary when the game begins
 		# it is altered by the events of pressing the down, up, left and right keys	
@@ -284,15 +283,13 @@ class DarthZuckerSprite(Sprite):
         # stores images index position in its list. Example - we start with images_left index 0
         self.current_image = 0
         # contains number to be added to current_image to get the next index postion
-        self.current_image_add = 1
-        
+        self.current_image_add = 1       
         # records the last time we changed the image while animating the emperor
         self.last_time = time.time()
         # counter used while emperor is jumping
         self.jump_count = 0
         # self.jumping is false by default, only changes when the jump function is run
-        # important because will be a condition for allowing functions that move
-        # the emperor to run
+        # self.jumping will be a condition for allowing functions that move the emperor
         self.jumping = False
         self.follow_platform = None
 
@@ -300,7 +297,6 @@ class DarthZuckerSprite(Sprite):
         game.canvas.bind_all('<KeyPress-Left>', self.turn_left)
         game.canvas.bind_all('<KeyPress-Right>', self.turn_right)
         game.canvas.bind_all('<KeyPress-Up>', self.jump)
-        # I added
         game.canvas.bind_all('<KeyPress-Down>', self.halt)
         
         # set the coordinates object variable to be an object of the InGameCrds class.
@@ -333,14 +329,14 @@ class DarthZuckerSprite(Sprite):
         	# controls how fast he runs right
             self.x = 2
 
-    # Stop (I added)
+    # Stop moving
     def halt(self, evt):
         if self.jumping == False:
             self.x = 0
 
 	#Jump
     def jump(self, evt):
-    	# have to check for false because not even the emperor is allowed to move while he is jumping
+    	# have to check for false because not even the emperor is allowed to jump while he is jumping
         if self.jumping == False:
         	# controls how high he jumps
         	# subtracting means he is going upward
@@ -352,7 +348,7 @@ class DarthZuckerSprite(Sprite):
 	
 	# draws emperor images to give the appearance of an animation
     def animate(self):
-    	# check to see if he is already moving (if he is moving we need to animate him, but if that we don't
+    	# check to see if he is already moving (if he is, proceed with animating him)
         if self.x != 0 and self.jumping == False:
         	# calculate the amount of time since the animate function was last called,
         	# if more than a tenth of a second has passed, we animate
@@ -399,7 +395,6 @@ class DarthZuckerSprite(Sprite):
                 if self.jump_count > 20:
                 	# positive value means bringing him down
                     self.y = 4
-            # check to see if he is not in the
             # if the value is greater than y, he is falling. 
             if self.y > 0:
             	# subtracting while he falls brings jump_count back dow to 0 so we can reuse it.
@@ -441,8 +436,7 @@ class DarthZuckerSprite(Sprite):
                 right = False
                 
 		# check if emperor has collided with other sprites
-		# loop through all the sprites in the game so you can check
-		# if emperor has collided with any sprites
+		# loop through all the sprites in the game so you can check if emperor has collided with any sprites
         for sprite in self.game.sprites:
             # don't need to analyze emperor himself for a collision with himself
             if sprite == self:
@@ -459,7 +453,7 @@ class DarthZuckerSprite(Sprite):
                 # checking for it once the sprite has gone down
                 top = False
              
-               
+            # if the bottom of the sprite has collided with a moving platform, the sprite will move with the platform   
             if bottom and bottom_collide(self.y, co, sprite_co) and sprite.y != 0:
                 self.follow_platform = sprite
                 self.y = sprite.y - 1
@@ -468,7 +462,7 @@ class DarthZuckerSprite(Sprite):
                 bottom = False
                 top = False
                 
-			# this checks for if emperor is collided with anything on the bottom 
+			# check if emperor is collided with anything on the bottom 
             if bottom and self.y > 0 and bottom_collide(self.y, co, sprite_co):
                 # subtract the y position of the other sprite from the y position of 
                 # the emperor, so he rests on top of the other sprite
@@ -488,32 +482,32 @@ class DarthZuckerSprite(Sprite):
 
 			# if emperor collides with sprite to his left
             if left and self.x < 0 and left_side_collide(co, sprite_co):
-            	# if so, stop moving
+            	# stop moving
                 self.x = 0
                 left = False
-                # if the emperor collides with a sprite whose endgame is set to True
+                # if the emperor collides with a sprite whose endgame is set to True (EscapeHatchSprite)
                 # then run the self.end(sprite) function that stops the game.
                 if sprite.endgame:
                     self.end(sprite)
 			
 			# if emperor collides with sprite to his right
             if right and self.x > 0 and right_side_collide(co, sprite_co):
-                # if so, stop moving
+                # stop moving
                 self.x = 0
                 right = False
-                # if the emperor collides with a sprite whose endgame is set to True
-                # then run the self.end(sprite) function that stops the game.
+                # if the emperor collides with a sprite whose endgame is set to True (EscapeHatchSprite)
+                # then run the self.end(sprite) function that stops the game
                 if sprite.endgame:
                     self.end(sprite)
 		
-		# more conditions under which the emperor should fall
+		# conditions under which the emperor should fall
 		# if both falling and bottom are true, we have looped through all the sprites without colliding
 		# self.y == 0 and co.y2 < self.game.canvas_height means he's above the canvas height
 		# and needs to fall
         if falling and bottom and self.y == 0 and co.y2 < self.game.canvas_height:
             self.y = 4
 		
-		# here we call the function to move the emperor
+		# call the function to move the emperor
         self.game.canvas.move(self.image, self.x, self.y)
     
     # function for what happens when the emperor reaches the escape door    
@@ -530,7 +524,7 @@ class DarthZuckerSprite(Sprite):
         # the door closes
         sprite.closedoor()
         # pause to savor the thrill of victory before the window closes
-        time.sleep(1)
+        time.sleep(1)       
 # end DarthZuckerSprite class
 
 # create a variable from the class MoDro which we will pass as a parameter when we
