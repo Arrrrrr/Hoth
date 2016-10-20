@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- lotr-characters.xml -->
+<middleearth>
+    <race name="men">
+        <character>Aragorn</character>
+        <character>Gandalf</character>
+        <character>Eomer</character>
+        <character>Saruman</character>
+    </race>
+    <race name="hobbits">
+        <character>Merry</character>
+        <character>Frodo</character>
+        <character>Samwise</character>
+        <character>Pippin</character>
+    </race>
+    <race name="dwarves">
+        <character>Gimli</character>
+        <character>Thorin</character>
+        <character>Gloin</character>
+        <character>Bombur</character>
+    </race>
+    <race name="elves">
+        <character>Legolas</character>
+        <character>Haldir</character>
+        <character>Arwen</character>
+        <character>Galadriel</character>
+    </race>
+</middleearth>
