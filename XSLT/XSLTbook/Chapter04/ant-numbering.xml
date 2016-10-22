@@ -2,12 +2,42 @@
 <project name="sample_xhtml" default="test-saxon">
 	
 	<target name="test-saxon">
+		
 		<xslt classpath="lib\saxon8.jar"
 			in="lotr-characters.xml" 
 			out="lotr-characters-01.html" 
 			style="number-lotr-01.xsl">
 			<factory name="net.sf.saxon.TransformerFactoryImpl"/>
 		</xslt>
+		
+		<xslt classpath="lib\saxon8.jar"
+			in="lotr-characters.xml" 
+			out="lotr-characters-02.html" 
+			style="number-lotr-02.xsl">
+			<factory name="net.sf.saxon.TransformerFactoryImpl"/>
+		</xslt>
+		
+		<xslt classpath="lib\saxon8.jar"
+			in="lotr-characters.xml" 
+			out="lotr-characters-03.txt" 
+			style="number-lotr-03.xsl">
+			<factory name="net.sf.saxon.TransformerFactoryImpl"/>
+		</xslt>
+		
+		<xslt classpath="lib\saxon8.jar"
+			in="lotr-characters.xml" 
+			out="lotr-characters-04.txt" 
+			style="number-lotr-04.xsl">
+			<factory name="net.sf.saxon.TransformerFactoryImpl"/>
+		</xslt>
+		
+		<xslt classpath="lib\saxon8.jar"
+			in="lotr-characters.xml" 
+			out="lotr-characters-05.txt" 
+			style="number-lotr-05.xsl">
+			<factory name="net.sf.saxon.TransformerFactoryImpl"/>
+		</xslt>
+		
 	</target>
-
+	
 </project>
