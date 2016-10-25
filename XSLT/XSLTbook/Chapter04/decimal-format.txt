@@ -1,0 +1,18 @@
+
+Tests of <xsl:decimal-format> and format-number():
+
+ 1. format-number(3728493.3882, '#.###,##') : 3.728.493,39
+
+ 2. format-number(3728493.3882, '#,###.##', 'us_default') : 3,728,493.39
+
+ 3. format-number(number(1) div 0, '#.#') : Infinity
+
+ 4. format-number(number(1) div 0, '#.#', 'other_options') : 
+     unfathomably huge
+
+ 5. format-number(number('blue') * number('orange'), '#') : NaN
+
+ 6. format-number(number('blue') * number('orange'), '#', 'other_options') : 
+     [not a number]
+
+ 7. format-number(42, '#!', 'hash_mark') : #42
