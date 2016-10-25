@@ -38,6 +38,13 @@
 			<factory name="net.sf.saxon.TransformerFactoryImpl"/>
 		</xslt>
 		
+		<xslt classpath="lib\saxon8.jar"
+			in="lotr-characters.xml" 
+			out="lotr-characters-06.txt" 
+			style="number-lotr-06.xsl">
+			<factory name="net.sf.saxon.TransformerFactoryImpl"/>
+		</xslt>
+		
 	</target>
 	
 </project>

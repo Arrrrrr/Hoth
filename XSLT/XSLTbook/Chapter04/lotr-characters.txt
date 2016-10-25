@@ -1,0 +1,21 @@
+Middle Earth Residents
+men
+ Character first: Aragorn
+ Character second: Gandalf
+ Character third: Eomer
+ Character fourth: Saruman
+hobbits
+ Character first: Merry
+ Character second: Frodo
+ Character third: Samwise
+ Character fourth: Pippin
+dwarves
+ Character first: Gimli
+ Character second: Thorin
+ Character third: Gloin
+ Character fourth: Bombur
+elves
+ Character first: Legolas
+ Character second: Haldir
+ Character third: Arwen
+ Character fourth: Galadriel

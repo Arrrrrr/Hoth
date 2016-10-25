@@ -1,0 +1,21 @@
+Middle Earth Residents
+1. men
+2. Aragorn
+3. Gandalf
+4. Eomer
+5. Saruman
+6. hobbits
+7. Merry
+8. Frodo
+9. Samwise
+10. Pippin
+11. dwarves
+12. Gimli
+13. Thorin
+14. Gloin
+15. Bombur
+16. elves
+17. Legolas
+18. Haldir
+19. Arwen
+20. Galadriel

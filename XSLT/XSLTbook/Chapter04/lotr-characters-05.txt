@@ -1,0 +1,21 @@
+Even numbered Middle Earth Residents
+men
+  Aragorn
+  1.2. Gandalf
+  Eomer
+  1.4. Saruman
+hobbits
+  Merry
+  2.2. Frodo
+  Samwise
+  2.4. Pippin
+dwarves
+  Gimli
+  3.2. Thorin
+  Gloin
+  3.4. Bombur
+elves
+  Legolas
+  4.2. Haldir
+  Arwen
+  4.4. Galadriel
