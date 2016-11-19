@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE deathstar SYSTEM "death-star.dtd">
+<deathstar>
+    <name>The Death Star</name>
+    <summary>A powerful weapon that can destroy entire planets</summary>
+    <assets>
+        <weapons>
+            <weapon>Super laser</weapon>
+            <weapon>TIE fighters</weapon>
+            <weapon>Light sabers</weapon>
+            <weapon>Turbo lasers</weapon>
+        </weapons>
+        <sithlords>
+            <master>Darth Sidious</master>
+            <apprentice>Darth Vader</apprentice>
+        </sithlords>
+        <admirals>
+            <admiral>Tarkin</admiral>
+            <admiral>Motti</admiral>
+            <admiral>Tagge</admiral>
+        </admirals>
+    </assets>
+</deathstar>
+

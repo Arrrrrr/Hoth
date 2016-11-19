@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT deathstar (name,summary,assets+)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT summary (#PCDATA)>
+    <!ELEMENT assets (weapons+,sithlords+,admirals+)>
+       <!ELEMENT weapons (weapon+)>
+            <!ELEMENT weapon (#PCDATA)>
+       <!ELEMENT sithlords (master,apprentice)>
+            <!ELEMENT master (#PCDATA)>
+            <!ELEMENT apprentice (#PCDATA)>
+        <!ELEMENT admirals (admiral+)>
+            <!ELEMENT admiral (#PCDATA)>
