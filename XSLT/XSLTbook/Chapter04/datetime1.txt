@@ -1,0 +1,9 @@
+
+Tests of date and time formatting:
+
+The current date is
+12/12/2016
+The current time is
+11/00/GMT-08:00
+It's currently
+11:00 a.m. on December 12.

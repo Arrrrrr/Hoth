@@ -1,0 +1,10 @@
+More tests of formatting:
+
+Today is the fourteenth day of December, 2016
+Right now the time is 41st minute of the fifteenth hour of the day.
+The current time is 03:41 p.m. on Wednesday the 14.
+Today is the three hundred and forty-ninth day of the year.
+October 14, 1066 in French: 14 Oct 1066
+October 14, 1066 in French: 14 Octobre 1066
+October 14, 1066 in German: 14 Okt 1066
+October 14, 1066 in German: 14 Oktober 1066
