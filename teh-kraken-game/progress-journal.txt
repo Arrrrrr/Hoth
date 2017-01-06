@@ -3,3 +3,4 @@ downloaded undum game source code and tutorial. it will be really embarrassing i
 
 01/05/16
 did some graphic work
+changed game name to kraken
