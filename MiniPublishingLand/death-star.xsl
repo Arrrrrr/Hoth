@@ -11,6 +11,7 @@
         <html>
             <head>
                 <title>Death star information</title>
+                <link rel="stylesheet" href="death-star.css"/>
             </head>
             <body>
                     <h1>
