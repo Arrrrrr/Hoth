@@ -8,7 +8,7 @@ This is a place where you can see the places source data travel through on the j
 
 3.) XSL (death-star.xsl): A file that converts XML into another file format, such as HTML or PDF. Information architects develop XSL files, and then run XML and XSL files together in an XSL processor (such as Saxon or Xalan) to produce output. 
 
-4.) ANT: An ant script is a tool information architects use to run XML and XSL files together in an XSL processor (other tools include the Command Line Interface or oXygen XML Editor). This Ant script was created to be run in Eclipse, and to run the files death-star.xml and death-star.xsl though the Saxon XSL processor to output death-star.html.
+4.) ANT (ant-death-star.xml): An ant script is a tool information architects use to run XML and XSL files together in an XSL processor (other tools include the Command Line Interface or oXygen XML Editor). This Ant script was created to be run in Eclipse, and to run the files death-star.xml and death-star.xsl though the Saxon XSL processor to output death-star.html.
 
 4.) HTML (death-star.html): Output result of the publishing process.
 
