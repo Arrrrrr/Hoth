@@ -1,0 +1,6 @@
+body {
+    background-color: black;
+    font-family: consolas, "Lucida Console", Monaco, monospace;
+    color: red;
+    text-shadow: 0px 0px 5px white;
+}
