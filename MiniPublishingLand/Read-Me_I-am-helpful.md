@@ -10,6 +10,6 @@ This is a place where you can see the places source data travel through on the j
 
 4.) ANT (ant-death-star.xml): An ant script is a tool information architects use to run XML and XSL files together in an XSL processor (other tools include the Command Line Interface or oXygen XML Editor). This Ant script was created to be run in Eclipse, and to run the files death-star.xml and death-star.xsl though the Saxon XSL processor to output death-star.html.
 
-4.) HTML (death-star.html): Output result of the publishing process.
+5.) HTML (death-star.html): Output result of the publishing process.
 
-3.) CSS (death-star.css): Information architects develop CSS to style HTML files.
+6.) CSS (death-star.css): Information architects develop CSS to style HTML files.
