@@ -8,5 +8,5 @@ Essential facts about Cinnamon Toast Crunch cereal.
 -   Contains wheat, rice, cinnamon, and sugar
 -   Current tagline: "Crave those crazy squares"
 
-**Parent topic:**[Eat Cinnamon Toast Crunch](../task/t_eat_ctc.html)
+**Parent topic:**[Eat Cinnamon Toast Crunch](../task/t_eat_ctc.md)
 
