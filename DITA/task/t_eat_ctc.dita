@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<task id="t_eat_ctc">
+    <title>Eat Cinnamon Toast Crunch</title>
+    <shortdesc>Eat Cinnamon Toast Crunch in a bowl with milk, using a spoon.</shortdesc>
+    <taskbody>
+        <steps>
+            <step>
+                <cmd>Pour Cinnamon Toast Crunch into a bowl.</cmd>
+            </step>
+            <step>
+                <cmd>Pour milk into the bowl.</cmd>
+            </step>
+            <step>
+                <cmd>Eat Cinnamon Toast Crunch with a spoon.</cmd>
+            </step>
+        </steps>
+    </taskbody>
+</task>

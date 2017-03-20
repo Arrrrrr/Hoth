@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map PUBLIC "-//OASIS//DTD DITA Map//EN" "map.dtd">
+<map>
+ <title>Cinnamon Toast Crunch</title>
+ <topicref href="task/t_eat_ctc.dita">
+  <topicref href="concept/c-ctc.dita"/>
+  <topicref href="reference/r_ctc-facts.dita"/>
+ </topicref>
+</map>

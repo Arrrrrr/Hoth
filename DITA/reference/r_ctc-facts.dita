@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="r_ctc-facts">
+  <title>Cinnamon Toast Crunch Fact sheet</title>
+  <shortdesc>Essential facts about Cinnamon Toast Crunch cereal.</shortdesc>
+  <refbody>
+    <section>
+      <p>
+        <ul>
+          <li>Introduced in 1984</li>
+          <li>Produced by General Mills and Nestlé</li>
+          <li>Main market is US</li>
+          <li>Contains wheat, rice, cinnamon, and sugar</li>
+          <li>Current tagline: "Crave those crazy squares"</li>
+        </ul>
+      </p>
+    </section>
+  </refbody>
+</reference>
