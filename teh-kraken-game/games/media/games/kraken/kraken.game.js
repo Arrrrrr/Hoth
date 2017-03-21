@@ -7,7 +7,7 @@
 /* A unique id for your game. This is never displayed. I use a UUID,
  * but you can use anything that is guaranteed unique (a URL you own,
  * or a variation on your email address, for example). */
-undum.game.id = "be1c95b9-cbc7-48c6-8e6a-89837aa9113e";
+undum.game.id = "paisley-monroe-waylin";
 
 /* A string indicating what version of the game this is. Versions are
  * used to control saved-games. If you change the content of a game,
@@ -18,18 +18,11 @@ undum.game.version = "1.0";
 /* The situations that the game can be in. Each has a unique ID. */
 undum.game.situations = {
     start: new undum.SimpleSituation(
-        "<h1>Starting Out with Undum</h1>\
+        "<h1>Arrghary Farrghary</h1>\
         <img src='media/games/kraken/woodcut1.png' class='float_right'>\
-        <p>Welcome to the Undum tutorial. Undum is a tool for writing\
-        hypertext interactive fiction. It has some unique features\
-        and a visual design that encourages narrative games.</p>\
+        <p>Arrghary Farrghary be a pirate what had his arm lost in battle with some sea monster years ago. Losin' his arm 'twas jolly good fortune, as he replaced it with a robot arm. His robot arm had could take many forms: a fine sharp cutless sword, a pick fer breaking locks off o' treasure chests, a drinkin' horn fer the finest o' rum, a puppet for when he needed advice or someone to talk to, and many other piratey uses.</p>\
         \
-        <p>Hypertext interactive fiction is the digital equivalent of the\
-        Choose Your Own Adventure (CYOA) books that were popular in the\
-        1980s. The story is told in chunks, and you select from a range\
-        of options to move it forward. Unlike the book form, however, the\
-        digital form gives you far more flexibility to tell rich stories\
-        and introduce more interesting game elements.</p>\
+        <p>One day, having set his robot arm to beard brush mode for the brushing of his most bushled of beards, Arrghary heard a someone screamin' like a wee girl outside. Puttin' away his brush and switching to his stabbin' dagger, he hopped off his ship and headed down the street toward the girly screamings. To his surprise the girly screamings were coming from Dargle Burb, a largish sort of full grown man who often ducked and walked sideways to get through doors. \"Teh Kraken!\" he screamed, \"I seen teh beast with me own eyes!\" Then, the mammoth sized sailor fell stone dead from fear.</p>\
         \
         <p class='transient'>Click <a href='hub'>this link to\
         continue...</a></p>"
