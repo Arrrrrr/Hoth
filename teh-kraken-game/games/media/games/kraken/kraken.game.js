@@ -20,9 +20,9 @@ undum.game.situations = {
     start: new undum.SimpleSituation(
         "<h1>Arrghary Farrghary</h1>\
         <img src='media/games/kraken/woodcut1.png' class='float_right'>\
-        <p>Arrghary Farrghary be a pirate what had his arm lost in battle with some sea monster years ago. Losin' his arm 'twas jolly good fortune, as he replaced it with a robot arm. His robot arm had could take many forms: a fine sharp cutless sword, a pick fer breaking locks off o' treasure chests, a drinkin' horn fer the finest o' rum, a puppet for when he needed advice or someone to talk to, and many other piratey uses.</p>\
+        <p>Arrghary Farrghary is big hairy a pirate whose right arm was eaten by a sea monster. As anyone would, as he replaced it with a robot arm. His robot arm had could take many forms: a fine sharp cutless sword, a pick fer breaking locks off treasure chests, a drinking horn, a puppet for when he needed advice, and many other piratey uses.</p>\
         \
-        <p>One day, having set his robot arm to beard brush mode for the brushing of his most bushled of beards, Arrghary heard a someone screamin' like a wee girl outside. Puttin' away his brush and switching to his stabbin' dagger, he hopped off his ship and headed down the street toward the girly screamings. To his surprise the girly screamings were coming from Dargle Burb, a largish sort of full grown man who often ducked and walked sideways to get through doors. \"Teh Kraken!\" he screamed, \"I seen teh beast with me own eyes!\" Then, the mammoth sized sailor fell stone dead from fear.</p>\
+        <p>One day, having set his robot arm to beard brush mode for the brushing of his most bushled of beards, Arrghary heard a someone screaming like a girly outside. Putting away his brush and switching to his gullyin' dagger, he hopped off his ship and headed down the street toward the girly screamings. To his surprise the girly screamings were coming from Dargle Burb, a largish sort of full grown man who often ducked and walked sideways to get through doors. \"Teh Kraken!\" he screamed, \"I seen teh beast with me own eyes!\" Then, the sailor fell stone dead from fear.</p>\
         \
         <p class='transient'>Click <a href='hub'>this link to\
         continue...</a></p>"
