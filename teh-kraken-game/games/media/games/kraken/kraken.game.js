@@ -41,7 +41,7 @@ undum.game.situations = {
             system.write($("#s_situations").html());
         },
         tags: ["topic"],
-        optionText: "What Undum Games are Made Of",
+        optionText: "Arr... and thinking",
         displayOrder: 1
     }),
     todo: new undum.SimpleSituation(
