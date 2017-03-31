@@ -20,7 +20,7 @@ undum.game.situations = {
     start: new undum.SimpleSituation(
         "<h1>Arrghary Farrghary</h1>\
         <img src='media/games/kraken/woodcut1.png' class='float_right'>\
-        <p>Arrghary Farrghary is big hairy a pirate whose right arm was eaten by a sea monster. As anyone would, as he replaced it with a robot arm. His robot arm had could take many forms: a fine sharp cutless sword, a pick fer breaking locks off treasure chests, a drinking horn, a puppet for when he needed advice, and many other piratey uses.</p>\
+        <p>Arrghary Farrghary is big hairy a pirate whose right arm was eaten by a sea monster. As anyone would, as he replaced it with a robot arm. His robot arm could take many forms: a fine sharp cutless sword, a pick fer breaking locks off treasure chests, a drinking horn, a puppet for when he needed advice, and many other piratey uses.</p>\
         \
         <p>One day, having set his robot arm to beard brush mode for the brushing of his most bushled of beards, Arrghary heard a someone screaming like a girly outside. Putting away his brush and switching to his gullyin' dagger, he hopped off his ship and headed down the street toward the girly screamings. To his surprise the girly screamings were coming from Dargle Burb, a largish sort of full grown man who often ducked and walked sideways to get through doors. \"Teh Kraken!\" he screamed, \"I seen teh beast with me own eyes!\" Then, the sailor fell stone dead from fear.</p>\
         \
@@ -45,35 +45,23 @@ undum.game.situations = {
         displayOrder: 1
     }),
     todo: new undum.SimpleSituation(
-        "<p>Two things can happen in a situation. The character either\
-        <a href='links'>leaves</a> the situation and enters another one, or\
-        they carry out some <a href='./do-something?once'>action</a>. Actions may\
-        perform some processing, they may display some results, but\
-        ultimately they put the character back into the same situation\
-        again.</p>\
+        "<p>\"First of all,\" said Arrghary thoughtfully, \"We'll be wantin' a parlay with teh Mo'Dro. She be knowin' o' all manner o' beasts.\"</p>\
         \
-        <p>When you are designing your game, use situations to reflect a\
-        change in what the character can do. So you would change situation if\
-        the character pulls a lever to open a trapdoor, for example. Actions\
-        are intended for situations where the character can examine things\
-        more closely, or maybe top up their magic by drinking a potion.\
-        Things that don't affect the state of the world around them.</p>\
+        <p>Arrghary's suggestion was met with gasps from his fellow sailors.</p>\
         \
-        <p>Situations generate content when they are <em>enter</em>ed,\
-        <em>exit</em>ed, and when they receive an <em>act</em>ion (the\
-        italicised words are the names of the three methods that do this).\
-        You can write code to generate content in any way you like, so the\
-        content that is displayed can be totally dynamic: taking into\
-        account the current state of the character.\
-        Content is just plain HTML, so you use regular HTML tags to make\
-        things <strong>bold</strong> or <em>italic</em>, or to include\
-        images. This gives you a lot of flexibility. For example, since Undum\
-        targets HTML5 browsers, you could use the <em>audio</em> or\
-        <em>video</em> tags to include rich media.</p>\
+        <p>\"What are yeh all gaping like dead fishes fer?\" said Arrghary asked. \"Teh Mo'dro be one o' me bestest friends in teh whole wide world.\"</p>\
+        \
+        <p>\"But Arrghary,\" said Gorgish found the courage to ask, \"Didn't her highness attempt burnin' yer face off with the blast of a firey beast last time yeh set foot in her realm?\"</p>\
+        \
+        <p>\"Oh ay...\" said Arrghary, \"But what be a bit o' melted skin between mates?\"</p>\
+        \
+        <p>More brilliant content to come...</p>\
         \
         <p class='transient'>Make sure you've carried out the action above,\
         then <a href='hub'>return to the topic list</a>.</p>",
-        {
+
+        // try to add the action below yeh bilgerat
+{
             actions: {
                 'do-something': "<p>You carried out the action, well done.\
                                  You'll notice that the links for this\
@@ -443,7 +431,7 @@ undum.game.qualities = {
         "Inspiration", {priority:"0001", group:'progress'}
     ),
     novice: new undum.OnOffQuality(
-        "Novice", {priority:"0002", group:'progress', onDisplay:"&#10003;"}
+        "Seaweed", {priority:"0002", group:'progress', onDisplay:"&#10003;"}
     )
 };
 
@@ -467,5 +455,5 @@ undum.game.init = function(character, system) {
     character.qualities.luck = 0;
     character.qualities.novice = 1;
     character.qualities.inspiration = 0;
-    system.setCharacterText("<p>You are starting on an exciting journey.</p>");
+    system.setCharacterText("<p>Yer headed fer certain death...</p>");
 };

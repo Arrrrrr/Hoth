@@ -1,4 +1,4 @@
-12/29/17
+12/29/16
 downloaded undum game source code and tutorial. it will be really embarrassing if i can't customize it successfully. everyone will laugh at me.
 
 01/05/17
@@ -13,3 +13,9 @@ content edits
 
 03/26/17
 content updates
+
+03/30/17
+minor tweaks
+content
+
+pick up next @ teh-kraken-game/games/media/games/kraken/kraken.game.js lines 58 - 71
