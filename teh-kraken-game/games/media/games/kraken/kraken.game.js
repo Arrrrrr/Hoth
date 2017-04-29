@@ -85,16 +85,10 @@ undum.game.situations = {
 \
         <p>\"Eh, of course,\" said Arrghary.</p>\
         \
-        <p class='transient'>Make sure you've carried out the action above,\
-        then <a href='hub'>return to the topic list</a>.</p>",
-
-        // try to add the action below yeh bilgerat
-{
+        <p class='transient'><a href='./eat-a-scone'>CLICK HARRR TO EAT A SCONE</a> then <a href='hub'>return to the topic list</a>.</p>",
+		{
             actions: {
-                'do-something': "<p>You carried out the action, well done.\
-                                 You'll notice that the links for this\
-                                 situation are still active. This means you\
-                                 can click to perform the action again.</p>"
+                'eat-a-scone': "<p>YUM! That was delicious.</p>"
             }
         }
     ),
