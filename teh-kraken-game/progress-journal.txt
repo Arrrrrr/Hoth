@@ -18,4 +18,8 @@ content updates
 minor tweaks
 content
 
-pick up next @ teh-kraken-game/games/media/games/kraken/kraken.game.js lines 58 - 71
+04/29/17
+content
+learned how to add an action
+
+next: learn out how to leave situation
