@@ -349,7 +349,7 @@ undum.game.situations = {
         }
     ),
     "high-luck-only": new undum.SimpleSituation(
-        "<p>Your luck is higher than 'fair'. The link to this \
+        "<p>Your luck is higher than 'meh'. The link to this \
         situation would not\
         have appeared if it were lower.</p>",
         {
@@ -365,7 +365,7 @@ undum.game.situations = {
         }
     ),
     "low-luck-only": new undum.SimpleSituation(
-        "<p>Your luck is lower than 'fair'. The link to this situation \
+        "<p>Your luck is lower than 'meh'. The link to this situation \
         appears whether\
         it is low or high, but can only be chosen if it is low. It does this\
         by defining a <em>canChoose</em> method.</p>",

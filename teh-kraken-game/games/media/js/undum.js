@@ -491,8 +491,8 @@
      */
     var FudgeAdjectivesQuality = function(title, opts) {
         WordScaleQuality.call(this, title, [
-            "terrible".l(), "poor".l(), "mediocre".l(),
-            "fair".l(), "good".l(), "great".l(), "superb".l()
+            "kraken bait".l(), "shark bait".l(), "turtle bait".l(),
+            "meh".l(), "bottle 'o rum".l(), "cask o' rum".l(), "stockpile o' rum".l()
         ], opts);
         if (!('offset' in opts)) this.offset = -3;
     };
