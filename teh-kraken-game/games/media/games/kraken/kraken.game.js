@@ -57,34 +57,6 @@ undum.game.situations = {
         \
         <p>The Mo'Dro did indeed know of all manner of beasts. Although she had a particular fondness for dragons, her knowledge of water beasts such as teh Kraken was also quite good. She also made excellent scones.</p>\
 \
-        <p>\"Interesting...\" the Mo'Dro said, handing her favorite dragon a plate of scones. Arrghary told her that teh Kraken had appeared in the seas and frightened a man to the point of being stone dead. \"Wouldn't mind having one as pet, but of course that's impossible. He'd never get along with my dragons. You should really help him find his way home anyway.\"</p>\
-\
-        <p>\"Find his way home?\" Arrghary asked.</p>\
-\
-        <p>\"Of course! Teh Kraken originates from the Darkity Dark Cave of the Deep Dark Depths.\"</p>\
-\
-        <p>\"Would that be the cave that is also home to the pinky eels of death?\"</p>\
-\
-        <p>\"Yes, it is.\"</p>\
-\
-        <p>\"Which would be miles and miles under the sea?\"</p>\
-\
-        <p>\"Yes, it is.\"</p>\
-\
-        <p>\"Perhaps I'd rather not deal with teh Kraken in that case, Mo'Dro.\"</p>\
-\
-        <p>\"Perhaps my dragons would like to burn off your face, Arrghary.\"</p>\
-\
-        <p>\"Perhaps I'll be dealing with teh Kraken after all.\"</p>\
-\
-        <p>\"Have a scone, dear.\"</p>\
-\
-        <p>Arrghary helped himself to a scone, and asked, \"How would I be getting teh Kraken back to his cave. I dunna know how to find him.\"</p>\
-\
-        <p>\"I suggest you talk to Wizard Z about how to transport him. And you can find him using a regular expression, of course.\"</p>\
-\
-        <p>\"Eh, of course,\" said Arrghary.</p>\
-        \
         <p class='transient'><a href='./eat-a-scone'>CLICK HARRR TO EAT A SCONE</a> then <a href='hub'>return to the topic list</a>.</p>",
 		{
             actions: {
