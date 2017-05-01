@@ -44,7 +44,7 @@ undum.game.situations = {
         optionText: "Arr... and thinking",
         displayOrder: 1
     }),
-    todo: new undum.SimpleSituation(
+    thinking: new undum.SimpleSituation(
         "<p>\"First of all,\" said Arrghary thoughtfully, \"We'll be wantin' a parlay with teh Mo'Dro. She be knowin' o' all manner o' beasts.\"</p>\
         \
         <p>Arrghary's suggestion was met with gasps from his fellow sailors.</p>\
