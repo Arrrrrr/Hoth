@@ -1,7 +1,7 @@
 # import python library
 from random import randint
 
-# set up board
+# set up board array
 board = []
 
 for x in range(5):
@@ -22,7 +22,9 @@ def random_row(board):
 def random_col(board):
     return randint(0, len(board) - 1)
 
+# store the results of function random_row(board) in variable ship_row
 ship_row = random_row(board)
+# store the results of function random_col(board) in variable ship_col
 ship_col = random_col(board)
 
 # uncomment for cheating
