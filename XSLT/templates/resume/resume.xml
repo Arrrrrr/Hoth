@@ -1,0 +1,32 @@
+<resume>
+	<heading>
+		<name></name>
+		<telephone></telephone>
+		<email></email>
+	</heading>
+	<objective></objective>
+	<summary>
+		<skill></skill>
+	</summary>
+	<history>
+		<experience>
+			<title></title>
+			<company></company>
+			<start></start>
+			<end></end>
+			<accomplishments>
+				<accomplishment>
+				</accomplishment>
+			</accomplishments>
+		</experience>
+	</history>
+	<education>
+		<program>
+			<school></school>
+			<degree></degree>
+		</program>
+	</education>
+	<specialities>
+		<speciality></speciality>
+	</specialities>
+</resume>
