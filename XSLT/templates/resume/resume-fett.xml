@@ -1,0 +1,39 @@
+<resume>
+	<heading>
+		<name>Boba Fett</name>
+		<telephone>1-800-abc-defg</telephone>
+		<email>boba.fett@mail.bounty.com</email>
+	</heading>
+	<objective>Freeze Han Solo in carbonite (again)</objective>
+	<summary>
+		<skill>Hunted down and apprehended scruffy looking nerf herders</skill>
+		<skill>Wore a cool helmet</skill>
+		<skill>Had a holiday cartoon made about me</skill>
+	</summary>
+	<history>
+		<experience>
+			<title>Bounty Hunter</title>
+			<company>Boba Fett's Bounty Hunting Service</company>
+			<start>1980</start>
+			<end>1983</end>
+			<accomplishments>
+				<accomplishment>Froze Han Solo in Carbonite</accomplishment>
+				<accomplishment>Looked very nifty hanging out at Jabba's palace in my armor</accomplishment>
+				<accomplishment>Got eaten by a sarlaac (or... did I?)</accomplishment>
+				<accomplishment>Did cool looking jet pack things</accomplishment>
+			</accomplishments>
+		</experience>
+	</history>
+	<education>
+		<program>
+			<school>Kamino Elementary</school>
+			<degree>didn't graduate</degree>
+		</program>
+	</education>
+	<specialities>
+		<speciality>jet pack</speciality>
+		<speciality>blaster</speciality>
+		<speciality>looking intimidating</speciality>
+		<speciality>freezing peoples</speciality>
+	</specialities>
+</resume>
