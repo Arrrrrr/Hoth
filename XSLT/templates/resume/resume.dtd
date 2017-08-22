@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT resume (heading,objective,summary,history,education,specialities)>
+    <!ELEMENT heading (name,telephone,email)>
+      	<!ELEMENT name (#PCDATA)>
+      	<!ELEMENT telephone (#PCDATA)>
+      	<!ELEMENT email (#PCDATA)>
+    <!ELEMENT objective (#PCDATA)>
+    <!ELEMENT summary (skill*)>
+      	<!ELEMENT skill (#PCDATA)>
+    <!ELEMENT history (experience*)>
+        <!ELEMENT experience (title,company,start,end,accomplishments)>
+            <!ELEMENT title (#PCDATA)>
+            <!ELEMENT company (#PCDATA)>
+            <!ELEMENT start (#PCDATA)>
+            <!ELEMENT end (#PCDATA)>
+            <!ELEMENT accomplishments (accomplishment*)>
+                <!ELEMENT accomplishment (#PCDATA)>
+    <!ELEMENT education (program)>
+        <!ELEMENT program (school,degree)>
+            <!ELEMENT school (#PCDATA)>
+            <!ELEMENT degree (#PCDATA)>
+    <!ELEMENT specialities (speciality*)>
+        <!ELEMENT speciality (#PCDATA|tool)*>
+            <!ELEMENT tool (#PCDATA)>

@@ -1,0 +1,35 @@
+body {
+	background: white;
+	color: #393d40;
+	font-family: sans-serif;
+	font-size: 13px;
+	line-height: 24px;
+	font-weight: 100;
+}
+
+.code {
+	background: #E8E8FF;
+	display: block;
+    padding: 15px 20px;
+	font-family: Consolas, monaco, monospace;
+	font-size: 16px;
+	color: #583668;
+	line-height: 24px;
+	white-space: pre-wrap;
+	border-radius: 10px;
+	border: .1em solid #583668;
+}
+
+.codeph {
+	font-family: Consolas, monaco, monospace;
+	font-size: 13px;
+}
+
+.filepath {
+	font-family: Consolas, monaco, monospace;
+	font-size: 13px;
+}
+
+figcaption {
+	font-weight: bold;
+}

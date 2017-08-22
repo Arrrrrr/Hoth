@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT testreport (question,date,summary,scenario,results)>
+    <!ELEMENT question (#PCDATA)>
+    <!ELEMENT date (#PCDATA)>
+    <!ELEMENT summary (#PCDATA)>
+    <!ELEMENT scenario (sourcedata,transform+)>
+    	<!ELEMENT sourcedata (sourcedatalocation+,sourcedatadescription+)>
+    		<!ELEMENT sourcedatalocation (#PCDATA)>
+    		<!ELEMENT sourcedatadescription (para*,code*)>
+    		  <!ELEMENT para (#PCDATA|filename|codeph)*>
+    		      <!ELEMENT filename (#PCDATA)>
+    		  <!ELEMENT code (#PCDATA)>
+    	<!ELEMENT transform (transformlocation,transformoutput)>
+    		<!ELEMENT transformlocation (#PCDATA)>
+    		<!ELEMENT transformoutput (#PCDATA)>
+    <!ELEMENT results (result+)>
+    		<!ELEMENT result (resultdescription,resultimage)>
+    		    <!ELEMENT resultdescription (#PCDATA|codeph)*>
+    			<!ELEMENT resultimage (resultimagetitle,resultimagelink)>
+    				<!ELEMENT resultimagetitle (#PCDATA)>
+    				<!ELEMENT resultimagelink (#PCDATA)>
+
+
+<!ELEMENT codeph (#PCDATA)>
