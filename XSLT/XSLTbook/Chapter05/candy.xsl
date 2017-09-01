@@ -6,7 +6,7 @@
     <xsl:output method="html"/>
     
     <xsl:template match="candiesoftheworld">
-        <!-- repeats for each national-candy node -->
+        <!-- repeats for each national-candy -->
         <xsl:for-each select="national-candy">
             <html>
             <body>
