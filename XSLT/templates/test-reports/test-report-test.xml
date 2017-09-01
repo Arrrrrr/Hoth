@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE testreport SYSTEM "testreport.dtd">
+<testreport>
+    <question>Do frogs drink Earl Grey tea?</question>
+    <date>08.21.2017</date>
+    <summary>Frogs totally drink Earl Grey tea</summary>
+    <scenario>
+        <sourcedata>
+            <sourcedatalocation>Mo'Dro's teapot</sourcedatalocation>
+            <sourcedatadescription>
+                <para>Mo'dro calls her teapot <filename>benedict</filename>:</para>
+                <code>
+                    Mo'dro loves tea
+                    But when she has to go she never says 'pee'
+                    She calls it a break of biology
+                    (she's so British)
+                    
+                    c=====================
+                    | \:::|  |::://|
+                    |\ \::|  |::// |
+                    |\\ \:|  |:// /|
+                    |:\\ \|  |// /:|
+                    |::\\_|  |/_/::|
+                    |              |
+                    |_____.  ._____|
+                    |::/ /|  | \\::|
+                    |:/ //|  |\ \\:|
+                    |/ //:|  |:\ \\|
+                    | //::|  |::\ \|
+                    |//:::|__|:::\_|
+                    
+                </code>
+            </sourcedatadescription>
+            <sourcedatadescription>
+                <para>Toast calls her frog <filename>Olaf the Terrible</filename>:</para>
+                <code>
+                    Toast loves her frog
+                    He will not be eaten by a dog
+                    Or clubbed to his death in the fog
+                    (she loves her cat more)
+                    
+                    (__  __)
+                    |  |
+                    |  |________........--------........________                  __
+                    |  |\\                                      ~~~~~~~~------~~~~  ||
+                    |  | \\                             o                           ||
+                    |  |  ||                         o^/|\^o                        ||
+                    |  |  ||                     o\*`'.\|/.'`*/o                    ||
+                    |  |  ||                      \\\\\\|//////                     ||
+                    |  |  ||                       {HHHH@HHHH}                      ||
+                    |  |  ||                       ).--._.--.(                      ||
+                    |  |  ||                       ( O     O )                      ||
+                    |  |  ||:::::::::::::::::      /   . .   \       :::::::::::::::||
+                    |  |  ||:::::::::::::::::     .`._______.'.      :::::::::::::::||
+                    |  |  ||:::::::::::::::::    /(    \_/    )\     :::::::::::::::||
+                    |  |  ||:::::::::::::::::: _/  \  \   /  /  \_ :::::::::::::::::||
+                    |  |  ||::::::::::::::::::::::::::::::::::::::::::::::::::::::::||
+                    |  |  ||::::::::::::::::::::::::::::::::::::::::::::::::::::::::||
+                    |  |  ||::::::::::::::::::::::::::::::::::::::::::::::::::::::::||
+                    |  |  ||::::::::::::::::::::::::::::::::::::::::::::::::::::::::||
+                    |  |//::::::''''''''~~~~~~~~''''''''::::::::::::::::::::::::::''~~
+                    |  |                                         ~~~~~~~~~~
+             
+                    
+                </code>
+            </sourcedatadescription>
+        </sourcedata>
+        <transform>
+            <transformlocation>A tearoom for frogs</transformlocation>
+            <transformoutput>Toast's frog will be offered some of Mo'dro's tea</transformoutput>
+        </transform>
+    </scenario>
+    <results>
+        <result>
+            <resultdescription>
+                The frog  <codeph> o—-(^_^)—-o </codeph> drank the tea and asked for more.</resultdescription>
+            <resultimage>
+                <resultimagetitle>happy tea frog</resultimagetitle>
+                <resultimagelink>image/proof.jpg</resultimagelink>
+            </resultimage>
+        </result>
+    </results>
+</testreport>

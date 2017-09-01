@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<candiesoftheworld>
+    <national-candy>
+        <title>British</title>
+        <candy>
+            <name>Maltesers</name>
+        </candy>
+        <candy>
+            <name>Cadbury Twisted Bar</name>
+        </candy>
+        <candy>
+            <name>Flake Bar</name>
+        </candy>
+    </national-candy>
+    <national-candy>
+        <title>American</title>
+        <candy>
+            <name>Skittles</name>
+        </candy>
+        <candy>
+            <name>Snickers Bar</name>
+        </candy>
+        <candy>
+            <name>Hershey Kiss</name>
+        </candy>
+    </national-candy>
+    <national-candy>
+        <title>Israeli</title>
+        <candy>
+            <name>Elite Bar (shoqolad parah)</name>
+        </candy>
+        <candy>
+            <name>Hashachar Chocolate Spread</name>
+        </candy>
+        <candy>
+            <name>Must gum</name>
+        </candy>
+    </national-candy>
+</candiesoftheworld>
