@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- testlines.xsl -->
+<ul>
+    <li>Test &amp; test | test</li>
+    <li>test test test?</li>
+</ul>
