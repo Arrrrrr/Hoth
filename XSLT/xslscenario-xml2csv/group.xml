@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<groups>
+    <contentgroup side="empire">
+        <place label="deathstar">
+            <team member="sidious"/>
+            <team member="vader"/>
+        </place>
+    </contentgroup>
+    
+    <contentgroup side="rebellion">
+        <place label="hoth">
+            <team member="skywalker"/>
+            <team member="solo"/>
+            <team member="organa"/>
+        </place>
+    </contentgroup>
+</groups>
+

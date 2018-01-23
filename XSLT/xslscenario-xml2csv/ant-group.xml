@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="sample_xhtml" default="make-csv">
+    <!-- run this Ant script to convert -->
+    <target name="make-csv">
+        <xslt classpath="lib\saxon8.jar"
+            in="group.xml" 
+            out="group.csv" 
+            style="group.xsl">
+            <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        </xslt>
+    </target>
+    
+</project>
