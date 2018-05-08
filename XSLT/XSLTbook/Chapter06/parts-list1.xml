@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!-- parts-list1.xml -->
+<!DOCTYPE parts-list [
+<!ELEMENT parts-list    (component+, part+)>
+<!ELEMENT component     (name, partref+)>
+<!ATTLIST component     component-id ID #REQUIRED>
+
+<!ELEMENT name          (#PCDATA)>
+
+<!ELEMENT partref       EMPTY>
+<!ATTLIST partref       refid IDREF #REQUIRED>
+
+<!ELEMENT part          (name)>
+<!ATTLIST part          part-id ID #REQUIRED>
+
+]>
+
+<parts-list>
+    <component component-id="T-65">
+        <name>X-wing</name>
+        <partref refid="WG"/>
+        <partref refid="BL"/>
+        <partref refid="CP"/>
+        <partref refid="AM"/>
+    </component>
+    <component component-id="TIE-LN">
+        <name>TIE</name>
+        <partref refid="CL"/>
+        <partref refid="BL"/>
+        <partref refid="CP"/>
+    </component>
+    <!-- hey ding dong! you need to add the rest of the parks here! -->
+    <part part-id="WG">
+        <name>Wing</name>
+    </part>
+    <part part-id="BL">
+        <name>Blaster</name>
+    </part>
+    <part part-id="CP">
+        <name>Cockpit</name>
+    </part>
+    <part part-id="AM">
+        <name>Astro-mech</name>
+    </part>
+    <part part-id="CL">
+        <name>Solar energy collectors</name>
+    </part>
+
+</parts-list>

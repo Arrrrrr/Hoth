@@ -1,0 +1,13 @@
+
+Here is a test of the id()function:
+
+X-wing (component #T-65) uses these parts:
+Wing
+Blaster
+Cockpit
+Astro-mech
+
+TIE (component #TIE-LN) uses these parts:
+Blaster
+Cockpit
+Solar energy collectors
