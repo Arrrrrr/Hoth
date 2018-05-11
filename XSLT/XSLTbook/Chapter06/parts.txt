@@ -1,13 +1,22 @@
 
-Here is a test of the id()function:
+Here is a test of the id()function in reverse:
 
-X-wing (component #T-65) uses these parts:
-Wing
-Blaster
-Cockpit
-Astro-mech
+Wing (part #WG) is used in these products:
+X-wing
+TIE
 
-TIE (component #TIE-LN) uses these parts:
-Blaster
-Cockpit
-Solar energy collectors
+Blaster (part #BL) is used in these products:
+X-wing
+TIE
+
+Cockpit (part #CP) is used in these products:
+X-wing
+TIE
+
+Astro-mech (part #AM) is used in these products:
+X-wing
+TIE
+
+Solar energy collectors (part #CL) is used in these products:
+X-wing
+TIE
