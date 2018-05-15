@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- parts-list3 -->
+<!DOCTYPE parts-list [
+<!ELEMENT parts-list    (component+, part+, supplier+)>
+
+<!ELEMENT component     (name, partref+, description)>
+<!ATTLIST component     component-id ID #REQUIRED>
+
+<!ELEMENT name          (#PCDATA)>
+
+<!ELEMENT partref       EMPTY>
+<!ATTLIST partref       refid IDREF #REQUIRED>
+
+<!ELEMENT part          (name, description)>
+<!ATTLIST part          part-id ID #REQUIRED
+                        supplier CDATA #REQUIRED>
+                       
+<!ELEMENT description   (#PCDATA|partref)*>
+
+<!ELEMENT supplier      (name)>
+<!ATTLIST supplier      country CDATA #REQUIRED
+                        vendor-id CDATA #REQUIRED>                   
+]>
+
+<parts-list>
+    <component component-id="C01">
+        <name>Mandolorian Armor</name>
+        <partref refid="P01"/>
+        <partref refid="P02"/>
+        <partref refid="P03"/>
+        <description>If you wear this armor no one doubts that you are fierce. Comes with a <partref refid="P02"/>.</description>
+    </component>
+    <component component-id="C02">
+        <name>Clone armor</name>
+        <partref refid="P03"/>
+        <partref refid="P04"/>
+        <partref refid="P05"/>
+        <description>Show your brotherhood pride! Wear your clone armor. Comes complete with a <partref refid="P05"/>.</description>
+    </component>
+    
+    <part part-id="P01" supplier="V01">
+        <name>Cool looking helmet</name>
+        <description>Instantly makes you look cooler</description>
+    </part>
+    <part part-id="P02" supplier="V01">
+        <name>Totally awesome jetpack</name>
+        <description>Fly around looking awesome</description>
+    </part>
+    <part part-id="P03" supplier="V02">
+        <name>Grappling hook cuffs</name>
+        <description>Surprise people by shooting grappling hooks all over the place</description>
+    </part>
+    <part part-id="P04" supplier="V02">
+        <name>Trooper helmet</name>
+        <description>Paint it with nifty designs</description>
+    </part><part part-id="P05" supplier="V03">
+        <name>Flame thrower</name>
+        <description>How to make friends and flamethrower flames</description>
+    </part>
+    
+
+    <supplier country="Mandalore" vendor-id="V01">
+        <name>Combat Supplies for Cool People</name>
+    </supplier>
+    
+    <supplier country="Rodia" vendor-id="V02">
+        <name>Awesome Stuff Rodians Make</name>
+    </supplier>
+    
+    <supplier country="Tatooine" vendor-id="V03">
+        <name>Three Suns or None</name>
+    </supplier>
+    
+</parts-list>

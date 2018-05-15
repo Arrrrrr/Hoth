@@ -10,7 +10,7 @@
 <!ELEMENT partref       EMPTY>
 <!ATTLIST partref       refid IDREFS #REQUIRED>
 
-<!ELEMENT part          (name)>
+<!ELEMENT part          (name) >
 <!ATTLIST part          part-id ID #REQUIRED>
 ]>
 

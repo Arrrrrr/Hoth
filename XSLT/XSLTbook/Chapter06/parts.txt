@@ -1,22 +1,17 @@
 
-Here is a test of the id()function in reverse:
+Here is a test of the id() function in reverse:
 
-Wing (part #WG) is used in these products:
-X-wing
-TIE
+  Wing (part #WG) is used in:
+hihi
 
-Blaster (part #BL) is used in these products:
-X-wing
-TIE
+  Blaster (part #BL) is used in:
+hihi
 
-Cockpit (part #CP) is used in these products:
-X-wing
-TIE
+  Cockpit (part #CP) is used in:
+hihi
 
-Astro-mech (part #AM) is used in these products:
-X-wing
-TIE
+  Astro-mech (part #AM) is used in:
+hihi
 
-Solar energy collectors (part #CL) is used in these products:
-X-wing
-TIE
+  Solar energy collectors (part #CL) is used in:
+hihi
