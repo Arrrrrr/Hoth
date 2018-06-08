@@ -1,0 +1,54 @@
+<html>
+<body style="background-color:#eac0d6">
+<img id="unicorg" style="position:absolute; width:100px; left:50px;" src="unicorg.jpg">
+<img id="veg1" style="position:absolute; width:100px; left:-200px;" src="carrot.png">
+<img id="veg2" style="position:absolute; width:100px; left:-200px;" src="broccoli.png">
+<img id="veg3" style="position:absolute; width:100px; left:-200px;" src="salad.png">
+<p id="scoreTB" style="position:absolute; color:blue; font-size:20px;" font-family:Arial">Score: 0</p>
+
+<script>
+
+var score=0, yChange=3, speed=5, gameTimer;
+document.onkeydown=handleKeys;
+onready=startUp();
+function setLeft(id,x){document.getElementById(id).style.left=x+"px";}
+function setTop(id,y){document.getElementById(id).style.top=y+"px";}
+function getLeft(id){return document.getElementById(id).offsetLeft;}
+function getTop(id){return document.getElementById(id).offsetTop;}
+function randomNumber(low,high){return(Math.floor(low+Math.random()*(1+high+low)));}
+function isOverlapping(ob1,ob2){return ((getLeft(ob1)+100>getLeft(ob2)) && (getLeft(ob1)<getLeft(ob2)+100) && (getTop(ob1)+100>getTop(ob2)) && (getTop(ob1)<getTop(ob2)+100));}
+function startUp(){gameTimer=window.setInterval(moveThings,20)}
+function moveThings(){
+	for(var n=1; n<=3; n++) {
+		var x=getLeft("veg"+n);
+		if(x<-100){
+			x=window.innerWidth;
+			y=randomNumber(0,window.innerHeight-100);
+			setTop("veg"+n,y);
+			score=score+10;
+			document.getElementById("scoreTB").innerText="Score: "+score;
+			}
+		setLeft("veg"+n,x-speed-n);
+		if(isOverlapping("veg"+n,"unicorg")){
+			gameOver();
+			}
+		}
+		var y=getTop("unicorg");
+		if((y<=0) || (y>window.innerHeight-100)){yChange=-yChange;}
+		setTop("unicorg",y+yChange);
+	}
+	function handleKeys(e){
+		if(e.keyCode==38){yChange=-3;}
+		if(e.keyCode==40){yChange=3;}
+	}
+	function gameOver(){
+		clearInterval(gameTimer);
+		if(confirm("Game Over - Click OK to play again.")==true){
+			location.reload();
+			}
+		}
+</script>
+
+
+</body>
+</html>
