@@ -33,7 +33,7 @@
             </body>
         </html>
     </xsl:template>
-<!--    
+    
     <xsl:template match="supplier">
         <h2>
             <xsl:value-of select="name"/>
@@ -53,6 +53,6 @@
                 </li>
             </xsl:for-each>
         </ul>
-    </xsl:template>-->
+    </xsl:template>
     
 </xsl:stylesheet>
