@@ -5,7 +5,7 @@
     
     <xsl:output method="html"/>
     
-    <xsl:param name="country-name"/>
+    <xsl:param name="country-name" select="parts-list/supplier/@country"/>
     <xsl:key name="supplier-by-country" match="supplier" use="@country"/>
     <xsl:key name="part-by-supplier" match="part" use="@supplier"/>
     
@@ -33,7 +33,7 @@
             </body>
         </html>
     </xsl:template>
-    
+<!--    
     <xsl:template match="supplier">
         <h2>
             <xsl:value-of select="name"/>
@@ -53,6 +53,6 @@
                 </li>
             </xsl:for-each>
         </ul>
-    </xsl:template>
+    </xsl:template>-->
     
 </xsl:stylesheet>
