@@ -14,14 +14,22 @@
             <head>
                 <title>
                     <xsl:text>Parts from </xsl:text>
-                    <xsl:value-of select="$country-name"/>
+                    <xsl:for-each select="key('supplier-by-country', $country-name)">                                              
+                                <xsl:value-of select="@country"/>
+                                <xsl:text>&#160;</xsl:text> 
+                    </xsl:for-each>                    
                 </title>
             </head>
             <body style="font-family: sans-serif;">
-                <h1>
-                    <xsl:text>Parts from </xsl:text>
-                    <xsl:value-of select="$country-name"/>
-                </h1>
+                <p>These are our countries:</p>
+                <xsl:for-each select="key('supplier-by-country', $country-name)">
+                    <ul>
+                        <li>
+                            <xsl:text>&#xa;</xsl:text>                  
+                            <xsl:value-of select="@country"/>
+                        </li>
+                    </ul>
+                </xsl:for-each>
                 <xsl:choose>
                     <xsl:when test="key('supplier-by-country', $country-name)">
                         <xsl:apply-templates select="key('supplier-by-country', $country-name)"/>
