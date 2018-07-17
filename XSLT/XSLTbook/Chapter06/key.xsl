@@ -48,6 +48,8 @@
         </h2>
         <p>
             <xsl:value-of select="name"/>
+            <xsl:text> from </xsl:text>
+            <xsl:value-of select="@country"/>
             <xsl:text> supplies these parts:</xsl:text>
         </p>
         <ul>
