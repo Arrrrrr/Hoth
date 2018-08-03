@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- names.xml -->
 <addressbook>
-   <address>
-       <name>
-           <title>Lord</title>
-           <first-name>Darth</first-name>
-           <last-name>Vader</last-name>
-       </name>
-       <place>Smoldering Lava Pit</place>
-       <planet>Mustafar</planet>
-   </address>
-   <address>
-       <name>
-           <title>Emperor</title>
-           <first-name>Palpatine</first-name>
-           <last-name>Sidious</last-name>
-       </name>
-       <place>Fancy Throne</place>
-       <planet>Death Star</planet>
-   </address>
+    <address>
+        <name>
+            <title>Lord</title>
+            <first-name>Darth</first-name>
+            <last-name>Vader</last-name>
+        </name>
+        <place>Smoldering Lava Pit</place>
+        <planet>Mustafar</planet>
+    </address>
+    <address>
+        <name>
+            <title>Emperor</title>
+            <first-name>Palpatine</first-name>
+            <last-name>Sidious</last-name>
+        </name>
+        <place>Fancy Throne</place>
+        <planet>Death Star</planet>
+    </address>
     <address>
         <name>
             <title>Supreme Leader</title>
@@ -27,30 +27,30 @@
         <place>Dais</place>
         <planet>Star Killer</planet>
     </address>
-   <address>
-       <name>
-           <first-name>Kylo</first-name>
-           <last-name>Ren</last-name>
-       </name>
-       <place>Emo Room</place>
-       <planet>Star Killer</planet>
-   </address>
-   <address>
-       <name>
-           <title>Lord</title>
-           <first-name>Darth</first-name>
-           <last-name>Tyrannus</last-name>
-       </name>
-       <place>Buggy Stadium</place>
-       <planet>Geonosis</planet>
-   </address>
-   <address>
-       <name>
-           <title>Lord</title>
-           <first-name>Darth</first-name>
-           <last-name>Maul</last-name>
-       </name>
-       <place>Swamp</place>
-       <planet>Dathomir</planet>
-   </address>
+    <address>
+        <name>
+            <first-name>Kylo</first-name>
+            <last-name>Ren</last-name>
+        </name>
+        <place>Emo Room</place>
+        <planet>Star Killer</planet>
+    </address>
+    <address>
+        <name>
+            <title>Lord</title>
+            <first-name>Darth</first-name>
+            <last-name>Tyrannus</last-name>
+        </name>
+        <place>Buggy Stadium</place>
+        <planet>Geonosis</planet>
+    </address>
+    <address>
+        <name>
+            <title>Lord</title>
+            <first-name>Darth</first-name>
+            <last-name>Maul</last-name>
+        </name>
+        <place>Swamp</place>
+        <planet>Dathomir</planet>
+    </address>
 </addressbook>
