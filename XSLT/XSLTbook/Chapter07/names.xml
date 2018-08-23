@@ -53,4 +53,13 @@
         <place>Swamp</place>
         <planet>Dathomir</planet>
     </address>
+    <address>
+        <name>
+            <title>Assassin</title>
+            <first-name>Asaaj</first-name>
+            <last-name>Ventress</last-name>
+        </name>
+        <place>Swamp</place>
+        <planet>Dathomir</planet>
+    </address>
 </addressbook>
