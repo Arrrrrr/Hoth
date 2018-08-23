@@ -17,7 +17,7 @@
                         <xsl:sort select="place"/>
                         <xsl:for-each select="key('places', place)">
                             <xsl:sort select="name/last-name"/>
-                            <xsl:sort select="name/last-name"/>
+                            <xsl:sort select="name/first-name"/>
                             <tr>
                                 <xsl:if test="position() = 1">
                                     <td style="background: #66FF66; text-align: center; vertical-align: middle; font-weight:bold;" rowspan="{count(key('places', place))}">
