@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- helga.weapons.xsl -->
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    
+
     <xsl:output method="html" include-content-type="no"/>
-    
+
     <xsl:template match="/">
         <html>
             <head>
@@ -18,7 +18,7 @@
                                 <xsl:for-each select="current-group()">
                                     <li>
                                         <xsl:copy-of select="@*"/>
-                                        <xsl:copy-of select="*|text()"/>                               
+                                        <xsl:copy-of select="* | text()"/>
                                     </li>
                                 </xsl:for-each>
                             </ul>
@@ -33,12 +33,12 @@
             </body>
         </html>
     </xsl:template>
-    
+
     <xsl:template match="*">
         <xsl:copy>
             <xsl:copy-of select="@*"/>
             <xsl:apply-templates/>
-        </xsl:copy>        
+        </xsl:copy>
     </xsl:template>
-    
+
 </xsl:stylesheet>
